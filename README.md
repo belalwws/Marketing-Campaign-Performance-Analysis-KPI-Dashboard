@@ -37,6 +37,12 @@ A comprehensive end-to-end data analysis project that evaluates **digital market
 ├── 09_CPC_Comparison.png             # CPC by channel and platform
 ├── 10_Impressions_Share.png          # Impressions distribution (pie)
 ├── 11_Efficiency_Matrix.png          # Keyword efficiency scatter plot
+├── 12_Achievement_vs_Target.png      # Monthly achievement vs target tracking
+├── 13_Channel_CTR_Trend.png          # Channel CTR trend over time
+├── 14_Platform_CTR_Trend.png         # Platform CTR trend over time
+├── 15_MoM_Growth.png                 # Month-over-month growth waterfall
+├── 16_Budget_Efficiency.png          # Cost share vs click share efficiency
+├── 17_Cumulative_Performance.png     # Cumulative KPI tracking
 └── README.md
 ```
 
@@ -72,7 +78,15 @@ Created calculated columns for campaign evaluation:
 Benchmarked all channels and platforms against a **2% CTR target** — all channels exceeded the target with 185–194% achievement.
 
 ### Step 6: Dashboard & Visualization
-Built 11 professional charts covering KPI cards, bar charts, time series, pie charts, and a scatter-based efficiency matrix.
+Built 17 professional charts covering KPI cards, bar charts, time series, pie charts, and a scatter-based efficiency matrix.
+
+### Step 7: Achievement Trend & Target Tracking
+The senior analyst layer — tracking KPI performance over time:
+- **Monthly Achievement vs Target** — comparing actual CTR to the 2% target each month, with cumulative tracking
+- **Channel & Platform CTR Trends** — how each channel/platform performs month-over-month
+- **MoM Growth Analysis** — month-over-month growth rates for CTR, Clicks, and Cost
+- **Budget Efficiency** — comparing Cost Share vs Click Share per channel to identify where budget is well-spent vs wasted
+- **Cumulative Performance** — running totals showing the big picture trajectory
 
 ---
 
@@ -145,6 +159,40 @@ Built 11 professional charts covering KPI cards, bar charts, time series, pie ch
 
 ---
 
+## 📈 Achievement Trend & Target Tracking
+
+### Monthly Achievement vs Target
+> **5 out of 8 months** exceeded the 2% CTR target. September peaked at **262% achievement** (5.25% CTR). Q4 shows a clear decline requiring intervention — November dropped to just **82%**.
+
+![Achievement vs Target](12_Achievement_vs_Target.png)
+
+### Channel CTR Trend Over Time
+> All channels follow a similar seasonal pattern, but **Video consistently leads** during peak months. Display and Mobile show the highest consistency — **6/8 months above target**.
+
+![Channel CTR Trend](13_Channel_CTR_Trend.png)
+
+### Platform CTR Trend Over Time
+> DV360 leads across most months, especially during the Aug–Sep peak where it hits **5.67% CTR**.
+
+![Platform CTR Trend](14_Platform_CTR_Trend.png)
+
+### Month-over-Month Growth
+> August saw the biggest positive jump (**+96% CTR growth**, **+288% clicks**). November saw the sharpest decline (**-59% CTR**), signaling a need for Q4 campaign strategy revision.
+
+![MoM Growth](15_MoM_Growth.png)
+
+### Budget Efficiency: Cost Share vs Click Share
+> **Video** and **Display** have efficiency ratios above 1.0x — generating **more clicks than their share of budget**. Mobile (0.97x) and Search (0.98x) are slightly underperforming relative to their cost.
+
+![Budget Efficiency](16_Budget_Efficiency.png)
+
+### Cumulative Performance Over Time
+> Running CTR stabilizes at **3.79%** by end of period, with cumulative achievement at **189%** of target. Total spend reached **$858K** producing **3.77M clicks**.
+
+![Cumulative Performance](17_Cumulative_Performance.png)
+
+---
+
 ## 🏆 Scorecard
 
 ### Channel Performance vs Target (2% CTR)
@@ -174,15 +222,20 @@ Built 11 professional charts covering KPI cards, bar charts, time series, pie ch
 2. **DV360 outperforms Facebook Ads and Google Ads** in engagement rate (3.92% vs 3.79% vs 3.65%)
 3. **Weekdays drive stronger engagement** — 5.5% higher CTR than weekends
 4. **High-efficiency keywords identified** — "statement necklaces" (5.70% CTR, $0.14 CPC), "nature-inspired jewelry" (5.29% CTR, $0.14 CPC)
-5. **September was peak month** — CTR spiked to 5.25%, suggesting seasonal opportunity
-6. **November–December showed decline** — CTR dropped to ~1.7%, requiring campaign refresh
+5. **September was peak month** — CTR spiked to 5.25% (262% achievement), suggesting seasonal opportunity
+6. **November–December showed decline** — CTR dropped to ~1.7% (82% achievement), with November showing a -59% MoM decline
+7. **Video & Display have the best budget efficiency** — Efficiency Ratio > 1.0x, meaning they generate more clicks than their share of budget
+8. **Cumulative achievement reached 189%** — the overall campaign exceeded targets despite Q4 weakness
 
 ### Recommendations
-- **Increase Video channel budget allocation** to capitalize on superior CTR and lower CPC
+- **Increase Video channel budget allocation** to capitalize on superior CTR and lower CPC (Efficiency Ratio: 1.03x)
 - **Scale high-efficiency keywords** (top-left quadrant in efficiency matrix) for maximum ROI
+- **Shift 5-10% budget from Mobile/Search to Video/Display** — Mobile (0.97x) underperforms relative to budget share
 - **Leverage DV360** as primary ad platform given its consistent performance edge
 - **Boost weekend campaigns** with targeted content to close the weekday-weekend CTR gap
 - **Plan seasonal campaigns** around August–September engagement peaks
+- **Investigate Q4 decline** — November's -59% MoM CTR crash signals a campaign or audience fatigue issue
+- **Set up monthly achievement dashboards** to track target vs actual in real-time and catch declines early
 
 ---
 
@@ -197,8 +250,8 @@ python analysis.py
 ```
 
 This generates:
-- `Campaign_Analysis_Report.xlsx` — Full Excel report with 8 analysis sheets
-- 11 PNG dashboard charts
+- `Campaign_Analysis_Report.xlsx` — Full Excel report with 11 analysis sheets
+- 17 PNG dashboard charts
 
 ---
 
